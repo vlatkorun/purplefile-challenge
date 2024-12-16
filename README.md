@@ -3,6 +3,7 @@
 To start the project you need to run:
 
 ```
+ln -s $(pwd)/src/views $(pwd)/public/views
 yarn 
 yarn dev
 ```

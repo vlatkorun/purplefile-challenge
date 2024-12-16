@@ -1,0 +1,39 @@
+<div class="mr-2 py-2">
+    <label class="block text-sm/6 font-medium text-gray-900">Price</label>
+    <div class="mt-2 flex flex-col lg:flex-row">
+        <div class="lg:mr-2 flex items-center rounded-md bg-white pl-3 outline outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
+            <div class="shrink-0 select-none text-base text-gray-500 sm:text-sm/6">Min</div>
+            <input type="number"
+                   name="products-min-price-filter"
+                   id="products-min-price-filter"
+                   class="block min-w-0 grow py-1.5 px-2 text-base text-gray-900 placeholder:text-gray-400 focus:outline focus:outline-0 sm:text-sm/6"
+                   placeholder="0.00"
+                    {% if priceMin != "" %}
+                        value="{{ priceMin }}"
+                    {% endif %}
+            >
+            <div class="grid shrink-0 grid-cols-1 focus-within:relative">
+                <span class="col-start-1 row-start-1 w-full appearance-none rounded-md py-1.5 px-3 text-base text-gray-500 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                    EUR
+                </span>
+            </div>
+        </div>
+        <div class="mt-2 lg:mt-0 flex items-center rounded-md bg-white pl-3 outline outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
+            <div class="shrink-0 select-none text-base text-gray-500 sm:text-sm/6">Max</div>
+            <input type="number"
+                   name="products-max-price-filter"
+                   id="products-max-price-filter"
+                   class="block min-w-0 grow py-1.5 px-2 text-base text-gray-900 placeholder:text-gray-400 focus:outline focus:outline-0 sm:text-sm/6"
+                   placeholder="0.00"
+                    {% if priceMax != "" %}
+                        value="{{ priceMax }}"
+                    {% endif %}
+            >
+            <div class="grid shrink-0 grid-cols-1 focus-within:relative">
+                <span class="col-start-1 row-start-1 w-full appearance-none rounded-md py-1.5 px-3 text-base text-gray-500 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                    EUR
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
